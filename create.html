@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+    margin: 0;
+    min-height: 100vh;
+     
+    background-image: url(img/x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;        
+    background-position: center;   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+ 
+}
+
+        .box {
+            background-image : url(img/rr.avif);
+           
+    background-repeat: no-repeat;
+    background-size: cover;        
+    background-position: center; 
+            padding: 15px 30px;
+            width: 340px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(255, 12, 12, 0.2);
+            color: white;
+        }
+        
+        h2 { text-align: center; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        button {
+            width: 100%; padding: 10px; background: #43e97b;
+            border: none; color: #000; font-size: 16px; cursor: pointer;
+        }
+        button,
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 14px 0;          /* increase height */
+    background-color:linear-gradient(135deg,rgb(175, 122, 243) rgb(127, 240, 240)); /* professional blue */
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    ;
+}
+
+/* Hover effect */
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #1e40af;
+}
+
+      
+        .help-text {
+    margin-top: 4px;   
+    margin-bottom: 12px;
+    font-size: 13px;
+    color:white;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    opacity: 90%;
+    
+}
+.back{
+
+    color: bisque;
+}
+.ti{
+
+    border-radius: 10px;
+    padding: 15px 10px;
+    color:black;
+   
+
+  
+    
+}
+
+        
+
+    </style>
+</head>
+<body action="login.html" >
+<div class="box">
+    <h2>Sign Up</h2>
+    <form action="login.html">
+
+
+        <label for="Username">Username:</label>
+        <input type="text" placeholder="Full Name" required>
+
+         <p class="help-text">Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.</p>
+
+          <label for="email">Emai:</label>
+
+        <input type="email" placeholder="Email" required>
+          <label for="Password">Password:</label>
+
+        <input type="password" placeholder="Password" required minlength="8">
+
+        <p class="help-text">
+    Username may contain alphanumeric characters or single hyphens,and cannot begin or end with a hyphen.
+</p>
+
+    
+ <div >
+   
+    </a><button type="submit" class="ti">Create Account</button>
+    <br><br>
+<div class="back">
+     <a href="login.html" style="color: rgb(213, 201, 236);"> Back</a><br>
+     </div>
+       
+        </div>
+    </form>
+</div>
+</body>
+</html>
