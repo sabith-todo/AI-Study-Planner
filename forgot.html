@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reset Password</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img/ll.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            background-image: url(img/tt.jpg);
+            background-size: cover;
+            padding: 30px;
+            width: 460px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .actions {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+.actions input:hover {
+    transform: scale(1.05);
+    background: #38f9d7;
+}
+
+
+.actions input[type="submit"],
+.actions input[type="reset"] {
+    width: 160px;          /* bigger width */
+    padding: 14px 0;       /* taller buttons */
+    background: #43e97b;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;       /* bigger text */
+    font-weight: bold;
+    border-radius: 12px;   /* smooth rounded */
+    color: black;
+    transition: all 0.3s ease;
+}
+
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Reset Password</h1>
+
+    <form onsubmit="return validatePassword()">
+
+        <label for="password">New Password</label>
+        <input type="password" id="password" placeholder="Create new password" required>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+        <div class="actions">
+            <input type="submit" value="Confirm">
+            <input type="reset" value="Clear">
+        </div>
+
+        <a href="login.html" class="back">Back to Login Page</a>
+    </form>
+</div>
+
+<script>
+function validatePassword() {
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return false;
+    }
+
+    alert("Password set successfully!");
+    window.location.href = "login.html"; // redirect
+    return false;
+}
+</script>
+
+</body>
+</html>
