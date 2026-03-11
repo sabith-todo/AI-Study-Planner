@@ -1,192 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="bala" content="width=device-width, initial-scale=1.0">
-<title>Studix</title>
-<link rel="icon" href="img/logo.jpg" type="image/x-icon">
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studix - Smart Study Planner</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="academic.png">
 
-    body {
-        background: #0f172a;
-        color: white;
-        line-height: 1.6;
-    }
-
-    header {
-        background: #0f172a;
-        padding: 20px 10%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #1e293b;
-    }
-
-    header h1 {
-        color: #38bdf8;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 20px;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #38bdf8;
-    }
-
-    .hero {
-        padding: 100px 10%;
-        text-align: center;
-    }
-
-    .hero h2 {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-
-    .hero p {
-        font-size: 18px;
-        color: #cbd5e1;
-        margin-bottom: 30px;
-    }
-
-    .btn {
-        background: #38bdf8;
-        padding: 12px 25px;
-        color: black;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .btn:hover {
-        background: #0ea5e9;
-    }
-
-    section {
-        padding: 80px 10%;
-    }
-
-    .services, .portfolio ,.About {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .card {
-        background: #1e293b;
-        padding: 30px;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        background: #334155;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        border-top: 1px solid #1e293b;
-        margin-top: 50px;
-        color: #94a3b8;
-    }
-
-    @media(max-width: 768px) {
-        .hero h2 {
-            font-size: 28px;
-        }
-    }
-</style>
 </head>
-<body>
+<body class="home-page">
 
-<header>
-    <h1>Smart Study panner</h1>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="login.html">Sing In</a>
-        <a href="create.html">Sing Up</a>
-        <a href="#About">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <header class="navbar">
+        <div class="logo">Studix</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="login.html" class="nav-btn">Sign In</a>
+            <a href="create.html" class="nav-btn secondary">Sign Up</a>
+        </nav>
+    </header>
 
-<section class="hero">
-    <h2>We Build Your Powerful Knowledge </h2>
-    <p>This website is fully Focus on Your Carrer & Included AI,Game Based</p>
-    <a href="#contact" class="btn">Get a Quote</a>
-</section>
-
-<section id="services">
-    <h2 style="text-align:center; margin-bottom:40px;">Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>AI- Study Games</h3>
-            <p></p>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Plan Smarter. Learn Better. <span>With Studix.</span></h1>
+            <p>
+                Studix is a smart student study planner that helps you organize tasks,
+                manage time, and get AI-powered study guidance in one place.
+            </p>
+            <div class="hero-buttons">
+                <a href="create.html" class="btn primary">Get Started</a>
+                <a href="login.html" class="btn outline">Login</a>
+            </div>
         </div>
-        <div class="card">
-            <h3>Web App Development</h3>
-            <p>Scalable and secure web applications.</p>
-        </div>
-        <div class="card">
-            <h3>UI/UX Design</h3>
-            <p>Beautiful and user-friendly interface design.</p>
-        </div>
-    </div>
-</section>
 
-<section id="portfolio">
-    <h2 style="text-align:center; margin-bottom:40px;">Portfolio</h2>
-    <div class="portfolio">
-        <div class="card">
-            <h3>E-Commerce App</h3>
-            <p>Online shopping platform with payment integration.</p>
+        <div class="hero-card">
+            <h3>Today's Study Goals</h3>
+            <ul>
+                <li>DBMS - ER Diagram Revision</li>
+                <li>CN - OSI Model Practice</li>
+                <li>DAA - Sorting Algorithms</li>
+                <li>AI - Topic Planner</li>
+            </ul>
+            <button>AI Suggestion Ready</button>
         </div>
-        <div class="card">
-            <h3>Food Delivery App</h3>
-            <p>Real-time tracking and ordering system.</p>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Choose Studix?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Smart Planner</h3>
+                <p>Create daily and weekly study schedules easily.</p>
+            </div>
+            <div class="feature-card">
+                <h3>AI Study Help</h3>
+                <p>Get quick study plans and topic guidance instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Task Tracking</h3>
+                <p>Track completed and pending tasks with clarity.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Student Friendly</h3>
+                <p>Simple design made for students and academic projects.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Business Dashboard</h3>
-            <p>Analytics and reporting web application.</p>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-box">
+            <h2>About Studix</h2>
+            <p>
+                Studix is a modern web application built for students to improve
+                study planning, productivity, and academic management. It combines
+                a clean interface with smart features like task organization,
+                AI-based topic planning, and progress support.
+            </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <h1>About</h1>
-    <P> </P>
-</section>
+    <section class="cta">
+        <h2>Start Your Smart Study Journey Today</h2>
+        <p>Organize your tasks, plan your learning, and study with confidence.</p>
+        <a href="create.html" class="btn primary">Create Account</a>
+    </section>
 
-<section id="contact">
-    <h2 style="text-align:center; margin-bottom:40px;">Contact Us</h2>
-    <div style="max-width:500px; margin:auto;">
-        <form>
-            <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:15px; border:none; border-radius:5px;">
-            <input type="email" placeholder="Your Email" required style="width:100%; padding:10px; margin-bottom:15px; border:none; border-radius:5px;">
-            <textarea placeholder="Your Message" rows="5" required style="width:100%; padding:10px; margin-bottom:15px; border:none; border-radius:5px;"></textarea>
-            <button type="submit" class="btn" style="width:100%; border:none;">Send Message</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 AppDev Studio. All Rights Reserved.</p>
-</footer>
+    <footer class="footer">
+        <p>© 2026 Studix. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

@@ -1,66 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Study Planner</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f4f6f9;
-        }
-
-        input {
-            padding: 10px;
-            width: 300px;
-            font-size: 16px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .content-box {
-            margin: 30px auto;
-            width: 60%;
-            padding: 20px;
-            border-radius: 10px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            display: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studix AI Planner</title>
+    <link rel="stylesheet" href="AI.css">
+<link rel="icon" type="image/x-icon" href="academic.png">
 </head>
+<body class="ai-page">
 
-<body>
+    <header class="navbar">
+        <div class="logo">Studix</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="container.html">Dashboard</a>
+            <a href="planner.html">Planner</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+        </nav>
+    </header>
 
-    <h1>AI Based Study Planner</h1>
+    <section class="ai-hero">
+        <div class="ai-text">
+            <h1>AI-Based <span>Study Planner</span></h1>
+            <p>
+                Enter your topic and number of days to get a simple smart study plan.
+            </p>
+        </div>
+    </section>
 
-    <input type="text" id="topicInput" placeholder="Enter your topic">
-    <button onclick="generateContent()">Generate</button>
+    <section class="planner-box-section">
+        <div class="planner-box">
+            <h2>Generate Your Study Plan</h2>
 
-    <div class="content-box" id="resultBox"></div>
+            <div class="form-group">
+                <label for="topicInput">Topic Name</label>
+                <input type="text" id="topicInput" placeholder="Enter your topic">
+            </div>
+
+            <div class="form-group">
+                <label for="daysInput">Number of Days</label>
+                <input type="number" id="daysInput" placeholder="Enter days" min="1" max="30">
+            </div>
+
+            <button onclick="generateContent()">Generate Plan</button>
+
+            <div class="content-box" id="resultBox"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Studix. All Rights Reserved.</p>
+    </footer>
 
     <script>
         function generateContent() {
-            let topic = document.getElementById("topicInput").value;
+            let topic = document.getElementById("topicInput").value.trim();
+            let days = parseInt(document.getElementById("daysInput").value);
             let box = document.getElementById("resultBox");
 
             if (topic === "") {
-                alert("Please enter a topic!");
+                alert("Please enter a topic.");
                 return;
             }
 
+            if (!days || days < 1) {
+                alert("Please enter a valid number of days.");
+                return;
+            }
+
+            let plan = `<h3>Study Plan for ${topic}</h3>`;
+            
+            for (let i = 1; i <= days; i++) {
+                if (i === 1) {
+                    plan += `<p><strong>Day ${i}:</strong> Introduction and basic concepts of ${topic}</p>`;
+                } else if (i === days) {
+                    plan += `<p><strong>Day ${i}:</strong> Final revision and summary of ${topic}</p>`;
+                } else if (i % 3 === 0) {
+                    plan += `<p><strong>Day ${i}:</strong> Practice questions and problem solving in ${topic}</p>`;
+                } else {
+                    plan += `<p><strong>Day ${i}:</strong> Learn important concepts of ${topic}</p>`;
+                }
+            }
+
             box.style.display = "block";
-            box.innerHTML = `
-                <h2>Study Plan for ${topic}</h2>
-                <p>1. Introduction to ${topic}</p>
-                <p>2. Important Concepts of ${topic}</p>
-                <p>3. Practice Questions</p>
-                <p>4. Revision & Summary</p>
-            `;
+            box.innerHTML = plan;
         }
     </script>
 

@@ -1,163 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studix Login</title>
+    <link rel="stylesheet" href="login.css">
+<link rel="icon" type="image/x-icon" href="academic.png"></head>
+<body class="login-page">
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url(img/ultra.avif);
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-        }
-
-        .box {
-            width: 460px;
-            padding: 30px;
-            border-radius: 10px;
-            background-image: url(img/ultra.avif);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            color: white;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-        }
-
-        .remember {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-       .actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;        
-    margin-top: 20px;
-
-}
-.actions input {
-    width: 140px;
-}
-.actions input:hover {
-    transform: scale(1.05);
-    background: #38f9d7;
-}
-
-
-
-
-       .actions input[type="submit"],
-.actions input[type="reset"] {
-    width: 160px;          /* button width */
-    padding: 14px 0;       /* height */
-    font-size: 18px;       /* text size */
-    font-weight: bold;
-    border-radius: 12px;
-    background: #43e97b;
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-        
-
-        p {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        a {
-            color: blueviolet;
-            text-decoration: none;
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="box" >
-    <h1>Login</h1>
-
-    <form onsubmit="return loginUser()" >
-
-        <label>Username</label>
-        <input type="text" id="username" required>
-
-        <label>Email</label>
-        <input type="email" id="email" required>
-
-        <label>Password</label>
-        <input type="password" id="password" minlength="8" required>
-
-        <label>Role</label>
-        <select id="role" required>
-            <option value="">Select Role</option>
-            <option value="admin">Admin</option>
-            <option value="student">Student</option>
-        </select>
-
-        <div class="remember">
-            <input type="checkbox"> Remember Me
+    <div class="login-wrapper">
+        <div class="login-left">
+            <h1>Welcome Back to <span>Studix</span></h1>
+            <p>
+                Manage your study plans, track your progress, and get smart AI-based
+                guidance for better learning.
+            </p>
         </div>
 
-        <div class="actions">
-            <a href="http://127.0.0.1:5500/web/container.html">
-                <input type="submit" value="Login"  >
-            <input type="reset" value="Clear">
-            </a>
-            
+        <div class="login-box">
+            <h2>Sign In</h2>
+            <form onsubmit="return loginUser()">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" minlength="8" required>
+
+                <label for="role">Role</label>
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                </select>
+
+                <div class="remember-row">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="links">
+                    <a href="forgot.html">Forgot Password?</a>
+                    <p>New user? <a href="create.html">Create an account</a></p>
+                    <a href="index.html">Back to Home</a>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 
-    <p>
-        <a href="forgot.html" style="color: blueviolet;">Forgot Password?</a>
-        New user? <a href="create.html" style="color: blueviolet;">Create an account</a><br><br>
-        <a href="index.html" style="color: blueviolet;">Back</a>
-    </p>
-</div>
+    <script>
+        function loginUser() {
+            let user = document.getElementById("username").value.trim();
+            let pass = document.getElementById("password").value.trim();
+            let role = document.getElementById("role").value;
 
-<script>
-function loginUser() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-    let role = document.getElementById("role").value;
+            if (user === "admin" && pass === "admin123" && role === "admin") {
+                alert("Admin login successful");
+                window.location.href = "container.html";
+                return false;
+            }
 
-    // Demo credentials
-    if (user === "admin" && pass === "admin123" && role === "admin") {
-        alert("Admin login successful");
-        window.location.href = "http://127.0.0.1:5500/web/container.html";
-        return false;
-    }
+            if (user === "student" && pass === "student123" && role === "student") {
+                alert("Student login successful");
+                window.location.href = "container.html";
+                return false;
+            }
 
-    if (user === "student" && pass === "student123" && role === "student") {
-        alert("Student login successful");
-        window.location.href = "http://127.0.0.1:5500/web/container.html";
-        return false;
-    }
-
-    alert("Invalid login details");
-    return false;
-}
-</script>
+            alert("Invalid login details");
+            return false;
+        }
+    </script>
 
 </body>
 </html>

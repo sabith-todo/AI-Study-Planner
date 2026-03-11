@@ -3,174 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo Projects</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-
-            background-image: url(img/chat.png);
-            background-size: cover;
-            background-position: center;
-            color: azure;
-            padding: 40px;
-        }
-
-        /* Card container */
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            flex: 1;
-        }
-
-        /* Card */
-        .one {
-            background: linear-gradient(135deg, #6a5af9, #9f6cff);
-            color: white;
-            width: 260px;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .one:hover {
-            transform: translateY(-10px);
-        }
-
-        .one h3 {
-            margin-bottom: 10px;
-        }
-
-        .one p {
-            font-size: 14px;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .one button {
-            background: white;
-            color: #6a5af9;
-            border: none;
-            padding: 8px 14px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            background: rgb(65, 58, 126);
-            color: rgb(141, 138, 138);
-            text-align: center;
-            padding: 12px 20px;
-            margin-top: 30px;
-            margin-bottom: -35px;
-            opacity: 50%;
-            height: 80.5px;
-        }
-
-        .footer p {
-            margin: 5px 0;
-        }
-        
-        #icon {
-            width: 60px;
-            position: absolute;
-            top: 100px;
-            left: 100px;
-            cursor: grab;
-        }
-    </style>
+    <title>Studix Dashboard</title>
+    <link rel="stylesheet" href="container.css">
+<link rel="icon" type="image/x-icon" href="academic.png">
 </head>
+<body class="dashboard-page">
 
-<body >
-  
+    <header class="navbar">
+        <div class="logo">Studix</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="AI.html">AI Planner</a>
+            <a href="planner.html">Planner</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+        </nav>
+    </header>
 
-    <div class="container">
-
-        <div class="one">
-            <h3>IOT Project</h3>
-            <p>IoT-based smart farming monitoring (software only) is a digital system that uses simulated sensor data and software tools to monitor farm conditions like soil moisture, temperature, humidity, and weather. The system displays data on a web or mobile dashboard, analyzes it using predefined rules, and generates alerts or irrigation decisions automatically. It helps farmers monitor crops, save water, and improve productivity without using physical IoT hardware, making it ideal for academic and demo projects. 🌱</p>
-            <a href="https://github.com/sabith-todo/IOT-Based-smart-farming-monitor">
-                <button>Show</button>
-            </a>
+    <section class="dashboard-hero">
+        <div class="hero-text">
+            <h1>Welcome to Your <span>Studix Dashboard</span></h1>
+            <p>
+                Explore your projects, access smart planning tools, and manage your
+                study journey with a clean and modern dashboard.
+            </p>
         </div>
+    </section>
 
-        <div class="one">
-            <h3>Academic Project</h3>
-            <p>This academic application includes an admin allocation page for managing users and resources, an announcement page for sharing important updates, and a home page that provides easy navigation to all modules. It features a secure login page, material and notes pages for accessing study resources, a timetable page for scheduling, and role-based services to ensure appropriate access for admins and students. The system is designed to support effective academic management and enhance the overall learning experience.</p>
-            <a href="https://github.com/sabith-todo/App-">
-                <button>Show</button>
-            </a>
-        </div>
+    <section class="project-section">
+        <h2>My Projects</h2>
 
-        <div class="one">
-            <h3>Todo Rover Project</h3>
-            <p>I am developing a task-based autonomous rover that is capable of performing assigned tasks automatically using programmed logic and intelligent decision-making. The rover operates with minimal human intervention and is designed to navigate, monitor, and execute tasks efficiently. This project focuses on autonomy, reliability, and practical application in real-world environments.</p>
-             <a href="https://github.com/sabith-todo/reaction">
-                <button>Show</button>
-            </a>
-        </div>
+        <div class="project-grid">
 
-    </div>
-    <section>
-        <div>
-            <a href="AI.html">
+            <div class="project-card">
+                <h3>IoT Project</h3>
+                <p>
+                    A smart farming monitoring system using software logic to track
+                    moisture, temperature, humidity, and farm conditions for academic use.
+                </p>
+                <a href="https://github.com/sabith-todo/IOT-Based-smart-farming-monitor" target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
 
-            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" id="icon">
+            <div class="project-card">
+                <h3>Academic Project</h3>
+                <p>
+                    An academic management system with login, timetable, announcements,
+                    materials, notes, and role-based access for students and admins.
+                </p>
+                <a href="https://github.com/sabith-todo/App-" target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
 
-<script>
-    const icon = document.getElementById("icon");
-
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    icon.addEventListener("mousedown", (e) => {
-        isDragging = true;
-        offsetX = e.clientX - icon.offsetLeft;
-        offsetY = e.clientY - icon.offsetTop;
-        icon.style.cursor = "grabbing";
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (isDragging) {
-            icon.style.left = (e.clientX - offsetX) + "px";
-            icon.style.top = (e.clientY - offsetY) + "px";
-        }
-    });
-
-    document.addEventListener("mouseup", () => {
-        isDragging = false;
-        icon.style.cursor = "grab";
-    });
-</script>
-</a>
+            <div class="project-card">
+                <h3>Todo Rover Project</h3>
+                <p>
+                    A task-based autonomous rover system designed to perform assigned
+                    tasks automatically with intelligent programmed decision-making.
+                </p>
+                <a href="https://github.com/sabith-todo/reaction" target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
 
         </div>
     </section>
 
+    <a href="AI.html" class="ai-float" title="Open AI Planner">AI</a>
+
     <footer class="footer">
-        <div style="color: bisque;">
-             <p>Author: Sabith-Todo</p>
-             <p>© 2026 Todo Web. All rights reserved.</p>
-             <a href="mailto:sabithtodo@gmail.com">
-             <p style="color: rgb(231, 215, 215);">Email: sabithtodo@gmail.com</p>
-        </a>
-        </div>
-        
+        <p>Author: Sabith</p>
+        <p>© 2026 Studix. All rights reserved.</p>
+        <p><a href="mailto:sabithtodo@gmail.com">sabithtodo@gmail.com</a></p>
     </footer>
-   
 
 </body>
 </html>
