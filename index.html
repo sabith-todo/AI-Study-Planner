@@ -4,90 +4,382 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studix - Smart Study Planner</title>
+    <link rel="icon" href="img/academic.png" type="image/png">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="academic.png">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body class="home-page">
-
-    <header class="navbar">
-        <div class="logo">Studix</div>
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="login.html" class="nav-btn">Sign In</a>
-            <a href="create.html" class="nav-btn secondary">Sign Up</a>
+<body>
+    <header class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
+       
+        <div class="logo" title="AI-Based Smart Study Planner for Students" style="font-size: 40px;">Studix</div>
+        
+        <nav class="m" style="margin-right: 30px ; margin-left: 50px;;">
+            <a href="#features" title="Features" style="text-decoration: none;">Features</a>
+            <a href="#how" title="How It Works" style="text-decoration: none;">How It Works</a>
+            <a href="#articles" title="Articles" style="text-decoration: none;">Articles</a>
+            <a href="#preview" title="Preview" style="text-decoration: none;">Preview</a>
+            <a href="#contact" title="Contact" style="text-decoration: none;">Contact</a>
+            <a href="login.html" class="nav-btn" title="Dashboard" style="text-decoration: none;">Dashboard</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Plan Smarter. Learn Better. <span>With Studix.</span></h1>
+            <span class="hero-badge" style="background: linear-gradient(135deg, #0a29ef,rgb(148, 9, 212), #1e919b);">AI-Powered Student Productivity</span>
+            <h1 style="color: aliceblue;">Plan Smarter, <br>Study Better with <span>Studix</span></h1>
             <p>
-                Studix is a smart student study planner that helps you organize tasks,
-                manage time, and get AI-powered study guidance in one place.
+                Studix is a modern study planner built for students to organize tasks,
+                manage subjects, track academic progress, and get AI-based study guidance
+                in one simple platform.
             </p>
+
             <div class="hero-buttons">
                 <a href="create.html" class="btn primary">Get Started</a>
-                <a href="login.html" class="btn outline">Login</a>
+                <a href="#features" class="btn outline">Explore Features</a>
             </div>
         </div>
 
-        <div class="hero-card">
-            <h3>Today's Study Goals</h3>
-            <ul>
-                <li>DBMS - ER Diagram Revision</li>
-                <li>CN - OSI Model Practice</li>
-                <li>DAA - Sorting Algorithms</li>
-                <li>AI - Topic Planner</li>
-            </ul>
-            <button>AI Suggestion Ready</button>
+        <div class="hero-image">
+            <img src="img/11.jpg" alt="Study Planner Illustration">
+        </div>
+    </section>
+
+    
+  
+    <section class="how-it-works" id="how">
+        <div class="section-heading">
+            <h2>How It Works</h2>
+            <p>Studix makes study management simple, clear, and effective for students.</p>
+        </div>
+
+        <div class="steps">
+            <div class="step-card"
+                 onclick="showCard(
+                 'Create a Study Plan',
+                 'Students can add subjects, tasks, deadlines, and priority levels in one place. This helps build a proper daily and weekly study routine, reduces confusion, and improves time management before exams and assignments.',
+                 'img/12.jpg'
+                 )">
+                <img src="img/12.jpg" alt="Plan">
+                <h3>Create a Plan</h3>
+                <p>Add subjects, tasks, and study dates easily.</p>
+            </div>
+
+            <div class="step-card"
+                 onclick="showCard(
+                 'Use AI Guidance',
+                 'Studix includes AI-style guidance where students can enter a topic and number of days. The system provides a day-wise learning plan with basics, practice, and revision support for better preparation.',
+                 'img/16.jpg'
+                 )">
+                <img src="img/16.jpg" alt="AI">
+                <h3>Use AI Guidance</h3>
+                <p>Generate day-wise topic plans with smart support.</p>
+            </div>
+
+            <div class="step-card"
+                 onclick="showCard(
+                 'Track Progress',
+                 'Students can monitor completed and pending tasks, helping them stay disciplined, check workload, and improve consistency across all subjects.',
+                 'img/17.jpg'
+                 )">
+                <img src="img/17.jpg" alt="Progress">
+                <h3>Track Progress</h3>
+                <p>Stay focused by monitoring study completion.</p>
+            </div>
         </div>
     </section>
 
     <section class="features" id="features">
-        <h2>Why Choose Studix?</h2>
+        <div class="section-heading">
+            <h2>Why Choose Studix?</h2>
+            <p>Everything students need for smarter academic planning.</p>
+        </div>
+
         <div class="feature-grid">
-            <div class="feature-card">
+            <div class="feature-card"
+                 onclick="showCard(
+                 'Smart Planner',
+                 'The Smart Planner helps students organize subject-wise tasks, revision schedules, deadlines, and learning goals in one structured system. It reduces missed work and supports better planning.',
+                 'img/18.jpg'
+                 )">
+                <img src="img/18.jpg" alt="Planner">
                 <h3>Smart Planner</h3>
-                <p>Create daily and weekly study schedules easily.</p>
+                <p>Organize daily and subject-wise study schedules.</p>
             </div>
-            <div class="feature-card">
+
+            <div class="feature-card"
+                 onclick="showCard(
+                 'AI Study Help',
+                 'AI Study Help provides a simple topic-based learning path. Students enter a topic and Studix prepares a clean day-wise plan covering concepts, practice, and final revision.',
+                 'img/19.jpg'
+                 )">
+                <img src="img/19.jpg" alt="AI Help">
                 <h3>AI Study Help</h3>
-                <p>Get quick study plans and topic guidance instantly.</p>
+                <p>Get guided topic planning with smart support.</p>
             </div>
-            <div class="feature-card">
+
+            <div class="feature-card"
+                 onclick="showCard(
+                 'Task Tracking',
+                 'Task Tracking allows students to add, complete, and delete academic tasks easily. It keeps learning organized and gives a clear view of pending work.',
+                 'img/20.jpg'
+                 )">
+                <img src="img/20.jpg" alt="Tracking">
                 <h3>Task Tracking</h3>
-                <p>Track completed and pending tasks with clarity.</p>
+                <p>Manage completed and pending study tasks clearly.</p>
             </div>
-            <div class="feature-card">
-                <h3>Student Friendly</h3>
-                <p>Simple design made for students and academic projects.</p>
+
+            <div class="feature-card"
+                 onclick="showCard(
+                 'Productivity Boost',
+                 'Studix improves productivity by combining planning, task management, AI support, and progress monitoring into one student-friendly platform.',
+                 'img/21.jpg'
+                 )">
+                <img src="img/21.jpg" alt="Goal">
+                <h3>Productivity Boost</h3>
+                <p>Improve focus, discipline, and time management.</p>
             </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="about-box">
-            <h2>About Studix</h2>
+      <section class="article-section" id="articles">
+        <div class="section-heading">
+            <h2>Latest Study Articles</h2>
+            <p>Explore useful learning resources, AI tools, and study productivity updates.</p>
+        </div>
+
+        <div class="article-grid">
+            <div class="article-card">
+                <img src="img/12.jpg" alt="Article 1">
+                <div class="article-content">
+                    <span class="article-meta">March 7, 2026 • 25 min Plan</span>
+                    <h3 style="color: rgb(115, 160, 200);">Create a Plan: Organize subjects, tasks, and deadlines in a smart and simple way.</h3>
+                    <p>
+                       The Create a Plan feature allows students to build a clear and organized study schedule by adding subjects, 
+                       tasks, deadlines, and priority levels. It helps manage daily learning activities effectively, 
+                       avoid missed work, and improve consistency in academic preparation.
+                    </p>
+                </div>
+            </div>
+
+           
+
+            <div class="article-card">
+                <img src="img/14.jpg" alt="Article 3">
+                <div class="article-content">
+                    <span class="article-meta">February 26, 2026 • 20 min Understanding</span>
+                    <h3 style="color: rgb(115, 160, 200);">Build strong knowledge by understanding topics step by step.</h3>
+                    <p>
+                          The Learn feature focuses on concept understanding and knowledge building.
+                           Students can study topics in a structured order, explore important concepts, 
+                           and strengthen their academic foundation for better learning outcomes.
+                        </p>
+                </div>
+            </div>
+
+             <div class="article-card">
+                <img src="img/13.jpg" alt="Article 2">
+                <div class="article-content">
+                    <span class="article-meta">February 27, 2026 • 15 min Practice  </span>
+                    <h3 style="color: rgb(115, 160, 200);">Solve problems and review topics to strengthen your learning.</h3>
+                    <p>
+                        The Practicing feature encourages students to regularly solve problems,
+                         review topics, and apply learned concepts. Consistent practice helps strengthen understanding, 
+                         identify weak areas, and improve exam readiness.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-section" id="articles">
+ 
+
+    <div class="article-grid" style="margin-top: 40px;">
+        <div class="article-card">
+            <img src="img/article1.jpg" alt="Gizmo AI Alternatives">
+            <div class="article-content">
+                <span class="article-meta">March 7, 2026 • 25 min read</span>
+                <h3>Best Gizmo AI Alternatives Worth Trying in 2026</h3>
+                <p>Discover powerful AI study tools that can replace Gizmo AI for note-taking, flashcards, AI tutoring, and smarter exam preparation.</p>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <img src="img/article2.jpg" alt="Knowt AI Alternatives">
+            <div class="article-content">
+                <span class="article-meta">February 27, 2026 • 14 min read</span>
+                <h3>Best Knowt AI Alternatives Worth Trying in 2026</h3>
+                <p>Explore modern AI learning platforms that support revision, note conversion, quizzes, and smarter academic planning for students.</p>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <img src="img/article3.jpg" alt="TurboLearn AI Alternatives">
+            <div class="article-content">
+                <span class="article-meta">February 26, 2026 • 14 min read</span>
+                <h3>Best TurboLearn AI Alternatives Worth Trying in 2026</h3>
+                <p>Find useful AI tools that help students summarize topics, build study plans, and improve productivity before assignments and exams.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="preview-section" id="preview">
+        <div class="preview-text">
+            <h2>Manage Your Complete Study Workflow</h2>
             <p>
-                Studix is a modern web application built for students to improve
-                study planning, productivity, and academic management. It combines
-                a clean interface with smart features like task organization,
-                AI-based topic planning, and progress support.
+                Studix gives students a clean dashboard to manage planner tasks,
+                AI-generated topic guidance, and academic productivity in one place.
             </p>
+            <a href="login.html" class="btn primary">Open Dashboard</a>
+        </div>
+
+        <div class="preview-image" onclick="showCard(
+                 'Dashboard Overview',
+                 'The Studix dashboard provides a clear view of all study tasks, AI guidance, and progress tracking in one place. It helps students stay organized, focused, and productive throughout their academic journey.',
+                 'img/15.jpg'
+                 )">
+            <img src="img/15.jpg" alt="Dashboard Preview">
         </div>
     </section>
 
-    <section class="cta">
+    <section class="features-section">
+    <div class="container">
+      <h1>What you can do with Studley</h1>
+      <p class="subtitle">
+        From exam prep to homework help—everything you need to learn faster and smarter
+      </p>
+
+      <div class="feature-card green">
+        <div class="icon-box">
+          📱
+        </div>
+        <div class="feature-content">
+          <h2>Exam Preparation & Review</h2>
+          <p>
+            Transform lecture slides and notes into flashcards, quizzes, and fill-in-the-blank
+            questions instantly. Active recall techniques help you ace exams with less study time.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card purple">
+        <div class="icon-box">
+          📄
+        </div>
+        <div class="feature-content">
+          <h2>Homework Help & Assignment Support</h2>
+          <p>
+            Generate summaries and interactive study materials to simplify complex assignments.
+            Clarify difficult subjects and make your study sessions more productive.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card blue">
+        <div class="icon-box">
+          🔍
+        </div>
+        <div class="feature-content">
+          <h2>Research and Study Content Creation</h2>
+          <p>
+            Turn sprawling articles and video lectures into clear, digestible content.
+            Streamline note-taking and enhance comprehension to focus on developing insightful ideas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="cta-section">
         <h2>Start Your Smart Study Journey Today</h2>
-        <p>Organize your tasks, plan your learning, and study with confidence.</p>
+        <p>Plan better, stay consistent, and study with confidence using Studix.</p>
         <a href="create.html" class="btn primary">Create Account</a>
     </section>
 
-    <footer class="footer">
-        <p>© 2026 Studix. All Rights Reserved.</p>
+    <div class="accordion accordion-flush" id="accordionFlushExample" style="border-radius: 10px;">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div>
+                <h3>Studix</h3>
+                <p>AI-Based Smart Study Planner for Students</p>
+            </div>
+
+            <div>
+                <h4 style="text-decoration: none;">Quick Links</h4>
+                <p><a href="index.html" style="text-decoration: none;" >Home</a></p>
+                <p><a href="planner.html" style="text-decoration: none;" >Planner</a></p>
+                <p><a href="AI.html" style="text-decoration: none;" >AI Planner</a></p>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p><a href="mailto:sabithtodo@gmail.com" style="text-decoration: none;" > <i class="bi bi-envelope-fill"> </i> sabithtodo@gmail.com</a></p>
+                <p><a href="https://github.com/sabith-todo/AI-Study-Planner" target="_blank" style="text-decoration: none;" >GitHub</a></p>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Studix. All Rights Reserved.</p>
     </footer>
+
+    <div class="overlay" id="overlay" onclick="closeCard()"></div>
+
+    <div id="bigCard">
+        <img id="bigCardImg" src="" alt="Feature Image">
+        <h2 id="bigCardTitle"></h2>
+        <p id="bigCardText"></p>
+        <button onclick="closeCard()">Close</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        function showCard(title, text, img) {
+            document.getElementById("bigCardTitle").innerText = title;
+            document.getElementById("bigCardText").innerText = text;
+            document.getElementById("bigCardImg").src = img;
+            document.getElementById("bigCard").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closeCard() {
+            document.getElementById("bigCard").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>

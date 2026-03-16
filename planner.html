@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studix Planner</title>
+    <link rel="icon" href="img/academic.png" type="image/png">
     <link rel="stylesheet" href="planner.css">
-<link rel="icon" type="image/x-icon" href="academic.png"></head>
+</head>
 <body class="planner-page">
 
     <header class="navbar">
@@ -21,31 +22,56 @@
     <section class="planner-section">
         <div class="planner-box">
             <h1>Study Planner</h1>
+            <p class="planner-subtitle">Add your study tasks and manage them easily.</p>
 
-            <div class="form-group">
-                <input type="text" id="subject" placeholder="Enter subject name">
+            <div class="planner-form">
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Enter subject name">
+                </div>
+
+                <div class="form-group">
+                    <label for="task">Task</label>
+                    <input type="text" id="task" placeholder="Enter study task">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="">Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+                <button class="add-btn" onclick="addTask()">Add Task</button>
             </div>
 
-            <div class="form-group">
-                <input type="text" id="task" placeholder="Enter study task">
+            <div class="summary-box">
+                <div class="summary-card">
+                    <h3 id="totalTasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+                <div class="summary-card">
+                    <h3 id="completedTasks">0</h3>
+                    <p>Completed</p>
+                </div>
+                <div class="summary-card">
+                    <h3 id="pendingTasks">0</h3>
+                    <p>Pending</p>
+                </div>
             </div>
 
-            <div class="form-group">
-                <input type="date" id="date">
+            <div class="task-list-section">
+                <h2>My Tasks</h2>
+                <ul id="taskList"></ul>
             </div>
-
-            <div class="form-group">
-                <select id="priority">
-                    <option value="">Select Priority</option>
-                    <option value="High">High</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Low">Low</option>
-                </select>
-            </div>
-
-            <button onclick="addTask()">Add Task</button>
-
-            <ul id="taskList"></ul>
         </div>
     </section>
 
