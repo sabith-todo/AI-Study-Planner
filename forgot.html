@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studix Reset Password</title>
+
+<link rel="stylesheet" href="forgot.css">
+<link rel="icon" type="image/x-icon" href="academic.png">
+</head>
+
+<body class="forgot-page">
+
+<div class="reset-box">
+
+<h2>Reset Password</h2>
+
+<form onsubmit="return validatePassword()">
+
+<label>New Password</label>
+<input type="password" id="password" placeholder="Enter new password" minlength="8" required>
+
+<label>Confirm Password</label>
+<input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+<button type="submit">Confirm</button>
+
+<p class="back">
+<a href="login.html">Back to Login</a>
+</p>
+
+</form>
+
+</div>
+
+<script>
+function validatePassword(){
+
+let pass = document.getElementById("password").value;
+let confirm = document.getElementById("confirmPassword").value;
+
+if(pass !== confirm){
+alert("Passwords do not match");
+return false;
+}
+
+alert("Password changed successfully!");
+window.location.href="login.html";
+return false;
+
+}
+</script>
+
+</body>
+</html>

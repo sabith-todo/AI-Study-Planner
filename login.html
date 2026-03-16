@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studix Login</title>
+    <link rel="stylesheet" href="login.css">
+<link rel="icon" type="image/x-icon" href="academic.png"></head>
+<body class="login-page">
+
+    <div class="login-wrapper">
+        <div class="login-left">
+            <h1>Welcome Back to <span>Studix</span></h1>
+            <p>
+                Manage your study plans, track your progress, and get smart AI-based
+                guidance for better learning.
+            </p>
+        </div>
+
+        <div class="login-box">
+            <h2>Sign In</h2>
+            <form onsubmit="return loginUser()">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" minlength="8" required>
+
+                <label for="role">Role</label>
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                </select>
+
+                <div class="remember-row">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="links">
+                    <a href="forgot.html">Forgot Password?</a>
+                    <p>New user? <a href="create.html">Create an account</a></p>
+                    <a href="index.html">Back to Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function loginUser() {
+            let user = document.getElementById("username").value.trim();
+            let pass = document.getElementById("password").value.trim();
+            let role = document.getElementById("role").value;
+
+            if (user === "admin" && pass === "admin123" && role === "admin") {
+                alert("Admin login successful");
+                window.location.href = "container.html";
+                return false;
+            }
+
+            if (user === "student" && pass === "student123" && role === "student") {
+                alert("Student login successful");
+                window.location.href = "container.html";
+                return false;
+            }
+
+            alert("Invalid login details");
+            return false;
+        }
+    </script>
+
+</body>
+</html>

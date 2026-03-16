@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studix Planner</title>
+    <link rel="stylesheet" href="planner.css">
+<link rel="icon" type="image/x-icon" href="academic.png"></head>
+<body class="planner-page">
+
+    <header class="navbar">
+        <div class="logo">Studix</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="container.html">Dashboard</a>
+            <a href="AI.html">AI Planner</a>
+            <a href="login.html" class="logout-btn">Logout</a>
+        </nav>
+    </header>
+
+    <section class="planner-section">
+        <div class="planner-box">
+            <h1>Study Planner</h1>
+
+            <div class="form-group">
+                <input type="text" id="subject" placeholder="Enter subject name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="task" placeholder="Enter study task">
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="date">
+            </div>
+
+            <div class="form-group">
+                <select id="priority">
+                    <option value="">Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+
+            <button onclick="addTask()">Add Task</button>
+
+            <ul id="taskList"></ul>
+        </div>
+    </section>
+
+    <script src="planner.js"></script>
+</body>
+</html>

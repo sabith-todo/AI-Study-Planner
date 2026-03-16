@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studix Sign Up</title>
+    <link rel="stylesheet" href="create.css">
+<link rel="icon" type="image/x-icon" href="academic.png">
+</head>
+<body class="create-page">
+
+    <div class="signup-wrapper">
+        <div class="signup-left">
+            <h1>Join <span>Studix</span> Today</h1>
+            <p>
+                Create your account to organize study plans, track academic tasks,
+                and use smart AI-powered learning support.
+            </p>
+        </div>
+
+        <div class="signup-box">
+            <h2>Create Account</h2>
+            <form action="login.html">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <p class="help-text">
+                    Use letters, numbers, or hyphens only. Do not start or end with a hyphen.
+                </p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8" required>
+
+                <p class="help-text">
+                    Password must be at least 8 characters long.
+                </p>
+
+                <button type="submit" class="signup-btn">Create Account</button>
+
+                <div class="bottom-links">
+                    <p>Already have an account? <a href="login.html">Sign In</a></p>
+                    <a href="index.html">Back to Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
